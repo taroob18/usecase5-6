@@ -1,0 +1,94 @@
+/* CSS Variables for consistent theming */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #fff;
+    --text-color: #333;
+    --hover-color: #45a049;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--hover-color);
+}
+
+/* Responsive Grid Layout for Blog Posts */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.post {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.post h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Hover Effects for Buttons and Links */
+button.read-more {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.read-more:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+}
